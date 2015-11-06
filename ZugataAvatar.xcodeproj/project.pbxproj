@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21BDA2541BEC554000AAEA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDA2531BEC554000AAEA6E /* AppDelegate.swift */; };
-		21BDA2561BEC554000AAEA6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDA2551BEC554000AAEA6E /* ViewController.swift */; };
+		21BDA2541BEC554000AAEA6E /* ZAAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDA2531BEC554000AAEA6E /* ZAAppDelegate.swift */; };
+		21BDA2561BEC554000AAEA6E /* ZAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDA2551BEC554000AAEA6E /* ZAViewController.swift */; };
 		21BDA2591BEC554000AAEA6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21BDA2571BEC554000AAEA6E /* Main.storyboard */; };
 		21BDA25B1BEC554000AAEA6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21BDA25A1BEC554000AAEA6E /* Assets.xcassets */; };
 		21BDA25E1BEC554000AAEA6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21BDA25C1BEC554000AAEA6E /* LaunchScreen.storyboard */; };
@@ -38,8 +38,8 @@
 
 /* Begin PBXFileReference section */
 		21BDA2501BEC554000AAEA6E /* ZugataAvatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZugataAvatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21BDA2531BEC554000AAEA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21BDA2551BEC554000AAEA6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21BDA2531BEC554000AAEA6E /* ZAAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAAppDelegate.swift; sourceTree = "<group>"; };
+		21BDA2551BEC554000AAEA6E /* ZAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAViewController.swift; sourceTree = "<group>"; };
 		21BDA2581BEC554000AAEA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21BDA25A1BEC554000AAEA6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21BDA25D1BEC554000AAEA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,8 +118,8 @@
 		21BDA2521BEC554000AAEA6E /* ZugataAvatar */ = {
 			isa = PBXGroup;
 			children = (
-				21BDA2531BEC554000AAEA6E /* AppDelegate.swift */,
-				21BDA2551BEC554000AAEA6E /* ViewController.swift */,
+				21BDA2531BEC554000AAEA6E /* ZAAppDelegate.swift */,
+				21BDA2551BEC554000AAEA6E /* ZAViewController.swift */,
 				21BDA2571BEC554000AAEA6E /* Main.storyboard */,
 				21BDA25A1BEC554000AAEA6E /* Assets.xcassets */,
 				21BDA25C1BEC554000AAEA6E /* LaunchScreen.storyboard */,
@@ -433,8 +433,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21BDA2561BEC554000AAEA6E /* ViewController.swift in Sources */,
-				21BDA2541BEC554000AAEA6E /* AppDelegate.swift in Sources */,
+				21BDA2561BEC554000AAEA6E /* ZAViewController.swift in Sources */,
+				21BDA2541BEC554000AAEA6E /* ZAAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
