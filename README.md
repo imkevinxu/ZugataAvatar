@@ -17,3 +17,10 @@ Testing
 -------
 
 Press `⌘+U` to run UI and Unit tests.
+
+Features
+========
+
+- Displays an avatar image with colored, n-sided border
+- Ability to edit the color, border width, and number of sides
+- Saves the last picked value in local store for next launch

@@ -14,6 +14,8 @@
 		21BDA25E1BEC554000AAEA6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21BDA25C1BEC554000AAEA6E /* LaunchScreen.storyboard */; };
 		21BDA2691BEC554100AAEA6E /* ZugataAvatarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDA2681BEC554100AAEA6E /* ZugataAvatarTests.swift */; };
 		21BDA2741BEC554100AAEA6E /* ZugataAvatarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDA2731BEC554100AAEA6E /* ZugataAvatarUITests.swift */; };
+		21BDA2851BEC5A6F00AAEA6E /* ZAAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDA2841BEC5A6F00AAEA6E /* ZAAvatarView.swift */; };
+		21BDA2871BEC5A9E00AAEA6E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21BDA2861BEC5A9E00AAEA6E /* QuartzCore.framework */; };
 		806A1ABA6BBA2AD3A31DDC50 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882FF7BAF00930DC8D77D73F /* Pods.framework */; };
 		905B38ABD0AD21BD0BA0B1E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882FF7BAF00930DC8D77D73F /* Pods.framework */; };
 		CA3B82FBE91D0D5A539C3002 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882FF7BAF00930DC8D77D73F /* Pods.framework */; };
@@ -51,6 +53,8 @@
 		21BDA2731BEC554100AAEA6E /* ZugataAvatarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZugataAvatarUITests.swift; sourceTree = "<group>"; };
 		21BDA2751BEC554100AAEA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21BDA2821BEC574F00AAEA6E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		21BDA2841BEC5A6F00AAEA6E /* ZAAvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZAAvatarView.swift; sourceTree = "<group>"; };
+		21BDA2861BEC5A9E00AAEA6E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6209F2A62FC5C922872FFCF3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		882FF7BAF00930DC8D77D73F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0E451E54371A37432DF290 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BDA2871BEC5A9E00AAEA6E /* QuartzCore.framework in Frameworks */,
 				806A1ABA6BBA2AD3A31DDC50 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +92,7 @@
 		203AC558ACEA434E827E379F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21BDA2861BEC5A9E00AAEA6E /* QuartzCore.framework */,
 				882FF7BAF00930DC8D77D73F /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -120,6 +126,7 @@
 			children = (
 				21BDA2531BEC554000AAEA6E /* ZAAppDelegate.swift */,
 				21BDA2551BEC554000AAEA6E /* ZAViewController.swift */,
+				21BDA2841BEC5A6F00AAEA6E /* ZAAvatarView.swift */,
 				21BDA2571BEC554000AAEA6E /* Main.storyboard */,
 				21BDA25A1BEC554000AAEA6E /* Assets.xcassets */,
 				21BDA25C1BEC554000AAEA6E /* LaunchScreen.storyboard */,
@@ -433,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BDA2851BEC5A6F00AAEA6E /* ZAAvatarView.swift in Sources */,
 				21BDA2561BEC554000AAEA6E /* ZAViewController.swift in Sources */,
 				21BDA2541BEC554000AAEA6E /* ZAAppDelegate.swift in Sources */,
 			);

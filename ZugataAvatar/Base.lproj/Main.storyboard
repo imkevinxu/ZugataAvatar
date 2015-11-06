@@ -100,8 +100,10 @@
                     <connections>
                         <outlet property="avatarView" destination="ILq-pH-6G1" id="vLd-Vx-SKR"/>
                         <outlet property="borderWidthLabel" destination="EcJ-Q1-A9n" id="g80-iV-5kR"/>
+                        <outlet property="borderWidthSlider" destination="kKw-5h-eth" id="C1B-zH-kRU"/>
                         <outlet property="colorLabel" destination="RXu-z7-rOU" id="xK5-0X-Suv"/>
                         <outlet property="numberOfSidesLabel" destination="cuL-Ub-EZa" id="V9Q-CN-RY4"/>
+                        <outlet property="numberOfSidesSlider" destination="zr0-Uf-JwW" id="yZf-Ga-FBC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
