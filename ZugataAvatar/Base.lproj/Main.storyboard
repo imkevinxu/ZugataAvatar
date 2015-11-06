@@ -16,12 +16,97 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILq-pH-6G1" customClass="ZAAvatarView" customModule="ZugataAvatar" customModuleProvider="target">
+                                <rect key="frame" x="200" y="50" width="200" height="200"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="SdB-Vf-mGM"/>
+                                    <constraint firstAttribute="height" constant="200" id="ryq-mB-Eal"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="3" maxValue="18" translatesAutoresizingMaskIntoConstraints="NO" id="zr0-Uf-JwW">
+                                <rect key="frame" x="198" y="517" width="204" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="UsN-pb-VZi"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="numberOfSidesSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="oul-4N-sdj"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Border Width: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcJ-Q1-A9n">
+                                <rect key="frame" x="236" y="367" width="129" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="0.0" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="kKw-5h-eth">
+                                <rect key="frame" x="198" y="403" width="204" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="rw5-L5-gLz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="borderWidthSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tO9-t2-dy4"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Sides: 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuL-Ub-EZa">
+                                <rect key="frame" x="226" y="481" width="148" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqu-lp-bO7">
+                                <rect key="frame" x="243" y="310" width="115" height="33"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <state key="normal" title="Change Color"/>
+                                <connections>
+                                    <action selector="changeColorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gSG-Kc-Hui"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color: #FFFFFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXu-z7-rOU">
+                                <rect key="frame" x="242" y="274" width="117" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.44529742002487183" green="0.60648304224014282" blue="0.70668709278106689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EcJ-Q1-A9n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6f9-fc-gaa"/>
+                            <constraint firstItem="kKw-5h-eth" firstAttribute="top" secondItem="EcJ-Q1-A9n" secondAttribute="bottom" constant="15" id="9YC-fh-kBS"/>
+                            <constraint firstItem="ILq-pH-6G1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="CRn-uL-Haj"/>
+                            <constraint firstItem="RXu-z7-rOU" firstAttribute="top" secondItem="ILq-pH-6G1" secondAttribute="bottom" constant="24" id="D2G-c5-qFJ"/>
+                            <constraint firstItem="ILq-pH-6G1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HDu-vD-Qql"/>
+                            <constraint firstItem="EcJ-Q1-A9n" firstAttribute="top" secondItem="gqu-lp-bO7" secondAttribute="bottom" constant="24" id="JQH-4u-FCq"/>
+                            <constraint firstItem="kKw-5h-eth" firstAttribute="width" secondItem="zr0-Uf-JwW" secondAttribute="width" id="S1x-UD-X0b"/>
+                            <constraint firstItem="zr0-Uf-JwW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UaS-Yy-NrZ"/>
+                            <constraint firstItem="kKw-5h-eth" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uc3-L7-cjC"/>
+                            <constraint firstItem="RXu-z7-rOU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a47-JY-HKh"/>
+                            <constraint firstItem="zr0-Uf-JwW" firstAttribute="top" secondItem="cuL-Ub-EZa" secondAttribute="bottom" constant="15" id="gwl-sg-Xzs"/>
+                            <constraint firstItem="cuL-Ub-EZa" firstAttribute="top" secondItem="kKw-5h-eth" secondAttribute="bottom" constant="48" id="jdX-RX-zrV"/>
+                            <constraint firstItem="gqu-lp-bO7" firstAttribute="top" secondItem="RXu-z7-rOU" secondAttribute="bottom" constant="15" id="kBE-6Q-Lbq"/>
+                            <constraint firstItem="cuL-Ub-EZa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lmg-JH-DeS"/>
+                            <constraint firstItem="gqu-lp-bO7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wlV-ul-Gn2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="avatarView" destination="ILq-pH-6G1" id="vLd-Vx-SKR"/>
+                        <outlet property="borderWidthLabel" destination="EcJ-Q1-A9n" id="g80-iV-5kR"/>
+                        <outlet property="colorLabel" destination="RXu-z7-rOU" id="xK5-0X-Suv"/>
+                        <outlet property="numberOfSidesLabel" destination="cuL-Ub-EZa" id="V9Q-CN-RY4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="615" y="650"/>
         </scene>
     </scenes>
 </document>
