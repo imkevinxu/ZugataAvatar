@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import SDWebImage
 
 // MARK: - Properties
 
@@ -16,9 +17,10 @@ final class ZAAvatarView: UIView {
     var numberOfSides: Int!
     var borderWidth: CGFloat!
     var borderColor: UIColor!
+    var picture: UIImage!
 
     var borderView: UIView?
-    var pictureView: UIView?
+    var pictureView: UIImageView?
 
     // MARK: Initializers
 
@@ -46,7 +48,8 @@ final class ZAAvatarView: UIView {
         borderView!.layer.mask = shapeLayerForRect(bounds, withNumberOfSides: numberOfSides)
 
         if pictureView == nil {
-            pictureView = UIImageView(image: UIImage(named: "profile"))
+            pictureView = UIImageView(image: picture)
+            pictureView?.contentMode = .ScaleAspectFill
             addSubview(pictureView!)
         }
         pictureView!.frame = CGRectMake(borderWidth, borderWidth, frame.size.width - borderWidth * 2, frame.size.height - borderWidth * 2)
@@ -71,6 +74,28 @@ extension ZAAvatarView {
     func updateNumberOfSides(sides: Int) {
         numberOfSides = sides
         setNeedsLayout()
+    }
+
+    func updatePicture(image: UIImage) {
+        pictureView?.removeFromSuperview()
+        picture = image
+        setNeedsLayout()
+    }
+
+    func updatePictureWithURL(url: NSURL) {
+        let manager = SDWebImageManager.sharedManager()
+        manager.downloadImageWithURL(url, options: [], progress: nil, completed: {
+            image, error, cacheType, finished, imageURL in
+            self.pictureView!.image = image
+            self.setNeedsLayout()
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(UIImagePNGRepresentation(image), forKey: "picture")
+            defaults.synchronize()
+
+            // Removing cache benefit of SDWebImage so we can hit the same URL again for more random cats
+            SDImageCache.sharedImageCache().clearMemory()
+            SDImageCache.sharedImageCache().clearDisk()
+        })
     }
 }
 

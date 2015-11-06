@@ -19,6 +19,7 @@ final class ZAViewController: UIViewController {
     let NUMBER_OF_SIDES_KEY = "numberOfSides"
     let BORDER_WIDTH_KEY = "borderWidth"
     let BORDER_COLOR_KEY = "borderColor"
+    let PICTURE_KEY = "picture"
 
     // MARK: IBOutlets
 
@@ -40,20 +41,24 @@ extension ZAViewController {
     }
 
     private func setDefaultValues() {
-        if defaults.boolForKey(FIRST_TIME_LAUNCHED_KEY) == false {
+        if !defaults.boolForKey(FIRST_TIME_LAUNCHED_KEY) {
             defaults.setBool(true, forKey: FIRST_TIME_LAUNCHED_KEY)
             defaults.setInteger(6, forKey: NUMBER_OF_SIDES_KEY)
             defaults.setInteger(10, forKey: BORDER_WIDTH_KEY)
             defaults.setObject("#007AFF", forKey: BORDER_COLOR_KEY)
+            defaults.setObject(UIImagePNGRepresentation(UIImage(named: "profile")!), forKey: PICTURE_KEY)
             defaults.synchronize()
         }
 
         avatarView.numberOfSides = defaults.integerForKey(NUMBER_OF_SIDES_KEY)
+        numberOfSidesLabel.text = "Number of Sides: \(defaults.integerForKey(NUMBER_OF_SIDES_KEY))"
         numberOfSidesSlider.value = Float(defaults.integerForKey(NUMBER_OF_SIDES_KEY))
         avatarView.borderWidth = CGFloat(defaults.integerForKey(BORDER_WIDTH_KEY))
+        borderWidthLabel.text = "Border Width: \(defaults.integerForKey(BORDER_WIDTH_KEY))"
         borderWidthSlider.value = Float(defaults.integerForKey(BORDER_WIDTH_KEY))
         avatarView.borderColor = UIColor(hexString: defaults.objectForKey(BORDER_COLOR_KEY) as! String)
         colorLabel.text = "Color: \(defaults.objectForKey(BORDER_COLOR_KEY) as! String)"
+        avatarView.picture = UIImage(data: defaults.objectForKey(PICTURE_KEY) as! NSData)
     }
 }
 
@@ -97,5 +102,9 @@ extension ZAViewController {
         avatarView.updateNumberOfSides(Int(slider.value))
         defaults.setInteger(Int(slider.value), forKey: NUMBER_OF_SIDES_KEY)
         defaults.synchronize()
+    }
+
+    @IBAction func randomCatButtonTapped(sender: UIButton) {
+        avatarView.updatePictureWithURL(NSURL(string: "https://theoldreader.com/kittens/200/200")!)
     }
 }

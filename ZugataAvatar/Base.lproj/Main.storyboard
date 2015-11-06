@@ -27,7 +27,7 @@
                                 </constraints>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="3" maxValue="18" translatesAutoresizingMaskIntoConstraints="NO" id="zr0-Uf-JwW">
-                                <rect key="frame" x="198" y="517" width="204" height="31"/>
+                                <rect key="frame" x="198" y="456" width="204" height="31"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="UsN-pb-VZi"/>
@@ -37,14 +37,14 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Border Width: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcJ-Q1-A9n">
-                                <rect key="frame" x="236" y="367" width="129" height="21"/>
+                                <rect key="frame" x="236" y="352" width="129" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="0.0" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="kKw-5h-eth">
-                                <rect key="frame" x="198" y="403" width="204" height="31"/>
+                                <rect key="frame" x="198" y="377" width="204" height="31"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="rw5-L5-gLz"/>
@@ -54,14 +54,14 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Sides: 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuL-Ub-EZa">
-                                <rect key="frame" x="226" y="481" width="148" height="21"/>
+                                <rect key="frame" x="226" y="431" width="148" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqu-lp-bO7">
-                                <rect key="frame" x="243" y="310" width="115" height="33"/>
+                                <rect key="frame" x="243" y="295" width="115" height="33"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <state key="normal" title="Change Color"/>
@@ -76,12 +76,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTE-c1-gsn">
+                                <rect key="frame" x="249" y="510" width="103" height="33"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <state key="normal" title="Random Cat"/>
+                                <connections>
+                                    <action selector="randomCatButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ql-Tp-NIv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZTE-c1-gsn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="193-cD-mNs"/>
                             <constraint firstItem="EcJ-Q1-A9n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6f9-fc-gaa"/>
-                            <constraint firstItem="kKw-5h-eth" firstAttribute="top" secondItem="EcJ-Q1-A9n" secondAttribute="bottom" constant="15" id="9YC-fh-kBS"/>
+                            <constraint firstItem="ZTE-c1-gsn" firstAttribute="top" secondItem="zr0-Uf-JwW" secondAttribute="bottom" constant="24" id="7Wm-s6-gDi"/>
+                            <constraint firstItem="kKw-5h-eth" firstAttribute="top" secondItem="EcJ-Q1-A9n" secondAttribute="bottom" constant="4" id="9YC-fh-kBS"/>
                             <constraint firstItem="ILq-pH-6G1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="CRn-uL-Haj"/>
                             <constraint firstItem="RXu-z7-rOU" firstAttribute="top" secondItem="ILq-pH-6G1" secondAttribute="bottom" constant="24" id="D2G-c5-qFJ"/>
                             <constraint firstItem="ILq-pH-6G1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HDu-vD-Qql"/>
@@ -90,9 +101,9 @@
                             <constraint firstItem="zr0-Uf-JwW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UaS-Yy-NrZ"/>
                             <constraint firstItem="kKw-5h-eth" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uc3-L7-cjC"/>
                             <constraint firstItem="RXu-z7-rOU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a47-JY-HKh"/>
-                            <constraint firstItem="zr0-Uf-JwW" firstAttribute="top" secondItem="cuL-Ub-EZa" secondAttribute="bottom" constant="15" id="gwl-sg-Xzs"/>
-                            <constraint firstItem="cuL-Ub-EZa" firstAttribute="top" secondItem="kKw-5h-eth" secondAttribute="bottom" constant="48" id="jdX-RX-zrV"/>
-                            <constraint firstItem="gqu-lp-bO7" firstAttribute="top" secondItem="RXu-z7-rOU" secondAttribute="bottom" constant="15" id="kBE-6Q-Lbq"/>
+                            <constraint firstItem="zr0-Uf-JwW" firstAttribute="top" secondItem="cuL-Ub-EZa" secondAttribute="bottom" constant="4" id="gwl-sg-Xzs"/>
+                            <constraint firstItem="cuL-Ub-EZa" firstAttribute="top" secondItem="kKw-5h-eth" secondAttribute="bottom" constant="24" id="jdX-RX-zrV"/>
+                            <constraint firstItem="gqu-lp-bO7" firstAttribute="top" secondItem="RXu-z7-rOU" secondAttribute="bottom" id="kBE-6Q-Lbq"/>
                             <constraint firstItem="cuL-Ub-EZa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lmg-JH-DeS"/>
                             <constraint firstItem="gqu-lp-bO7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wlV-ul-Gn2"/>
                         </constraints>
