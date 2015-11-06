@@ -11,9 +11,9 @@ xcodeproj 'ZugataAvatar'
 workspace 'ZugataAvatar'
 link_with 'ZugataAvatar', 'ZugataAvatarTests', 'ZugataAvatarUITests'
 
-# A fast & simple, yet powerful & flexible logging framework
-# https://github.com/CocoaLumberjack/CocoaLumberjack
-pod 'CocoaLumberjack/Swift', '~> 2.0'
+# Asynchronous image downloader with cache support as a UIImageView category
+# https://github.com/rs/SDWebImage
+pod 'SDWebImage', '~>3.7'
 
 # Autolayout DSL for iOS
 # https://github.com/SnapKit/SnapKit
