@@ -88,6 +88,7 @@ extension ZAAvatarView {
             image, error, cacheType, finished, imageURL in
             self.pictureView!.image = image
             self.setNeedsLayout()
+
             let defaults = NSUserDefaults.standardUserDefaults()
             defaults.setObject(UIImagePNGRepresentation(image), forKey: "picture")
             defaults.synchronize()

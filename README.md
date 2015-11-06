@@ -3,6 +3,8 @@ ZugataAvatar iOS Codebase
 
 ![Version 1.0](http://img.shields.io/badge/Version-1.0-brightgreen.svg) ![iOS 9.0+](http://img.shields.io/badge/iOS-9.0+-blue.svg) ![Swift 2.1](http://img.shields.io/badge/Swift-2.1-orange.svg) ![CocoaPods 0.39.0](http://img.shields.io/badge/CocoaPods-0.39.0-red.svg) ![Platform Universal](http://img.shields.io/badge/Platform-Universal-lightgrey.svg)
 
+![Screenshot](screenshot.png)
+
 Setup
 -----
 
@@ -24,3 +26,4 @@ Features
 - Displays an avatar image with colored, n-sided border
 - Ability to edit the color, border width, and number of sides
 - Saves the last picked value in local store for next launch
+- Extended to update the profile picture with a local image or from a URL
