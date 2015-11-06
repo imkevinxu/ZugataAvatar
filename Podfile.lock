@@ -1,0 +1,22 @@
+PODS:
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - CocoaLumberjack/Swift (2.2.0):
+    - CocoaLumberjack/Extensions
+  - SnapKit (0.16.0)
+  - SwiftColors (0.3.1)
+
+DEPENDENCIES:
+  - CocoaLumberjack/Swift (~> 2.0)
+  - SnapKit (~> 0.15)
+  - SwiftColors (~> 0.3)
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  SnapKit: ddac6b339d571f9d80dbb733585b172ee9eed3cb
+  SwiftColors: 61efe0bf991cfed446684e03d1e9f635f1f11a84
+
+COCOAPODS: 0.39.0
